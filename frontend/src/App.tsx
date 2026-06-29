@@ -73,6 +73,13 @@ export default function App() {
               <div className="dot" />
               <span>Mistral-7B Base</span>
             </div>
+
+            <div className="header-badge" style={{
+              background:'rgba(245,158,11,0.1)', borderColor:'rgba(245,158,11,0.3)', color:'#fbbf24'
+            }} title="Cloud GPUs are expensive! Streaming simulated QLoRA output for demonstration.">
+              <Zap size={14} />
+              <span>Simulation Demo</span>
+            </div>
             
             {adapters.length > 0 && (
               <select 
