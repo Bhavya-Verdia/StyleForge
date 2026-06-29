@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "model": "base",
+      "rouge1": 0.314,
+      "rouge2": 0.134,
+      "rougeL": 0.237,
+      "perplexity": 12.5,
+      "avg_response_length": 58.7,
+      "num_samples": 20
+    },
+    {
+      "model": "finetuned",
+      "rouge1": 0.319,
+      "rouge2": 0.166,
+      "rougeL": 0.246,
+      "perplexity": 5.4,
+      "avg_response_length": 58.2,
+      "num_samples": 20
+    }
+  ],
+  "eval_samples": 20,
+  "note": "Evaluated on M-Series Mac natively."
+}

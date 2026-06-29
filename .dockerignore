@@ -1,0 +1,15 @@
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.git/
+.github/
+adapter_weights/
+*.safetensors
+*.bin
+.DS_Store
+notebooks/
+README.md

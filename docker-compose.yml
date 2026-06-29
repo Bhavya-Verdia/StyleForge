@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - USE_MOCK=true
+      - EVAL_RESULTS_PATH=./eval_results.json
+      - LOSS_LOG_PATH=./training_loss.csv
+    volumes:
+      - ./server/eval_results.json:/app/eval_results.json:ro
+      - ./server/training_loss.csv:/app/training_loss.csv:ro
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - server
